@@ -1,0 +1,9 @@
+curl -H 'Content-Type: application/json' -X POST -d '{"user": "Oleg"}' http://localhost:8080/greeting
+curl -X POST --data-binary @images/10022.jpg http://localhost:8080/readPlateNumber
+
+curl -X GET http://localhost:8080/read_plate_single?img_id=10022
+curl -X GET http://localhost:8080/read_plate_single?img_id=9965
+
+curl -X POST http://localhost:8080/read_plate_multiple \
+    -H "Content-Type: application/json"\
+    -d '{"img_ids": [9965, 10022]}'
