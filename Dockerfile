@@ -2,8 +2,7 @@ FROM python:3.10
 
 WORKDIR /app
 
-COPY requirements.txt ./
+COPY / /app
 RUN pip install -r requirements.txt -f https://download.pytorch.org/whl/torch_stable.html
 
-CMD [ "python", "./src/app.py" ]
-
+CMD [ "python", "src/app.py" ]

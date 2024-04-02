@@ -32,3 +32,26 @@ if __name__ == '__main__':
     with open('./images/9965.jpg', 'rb') as im:
         res = client.read_plate_number(im)
         print(res)
+
+
+# class GetImagesClient:
+#     def __init__(self, host):
+#         self.host = host
+    
+#     def get_image(image_id):
+#         response = requests.get(
+#             f'http://{addr}/images/{str(image_id)}',
+#             timeout=0.5,
+            
+#         )
+#         if response.status_code == 200:
+#             im = response.content
+#             return im
+        
+#         return None
+        
+
+# if __name__ == '__main__':
+#     im_ids = [9965, 10022]
+#     client = GetImagesClient(host)
+#     client.get_image(im_ids)
